@@ -1,0 +1,75 @@
+<div class="register-form">
+
+      <h1>Sell your real estate</h1>
+
+      <form (submit)="addRealestate($event)">
+
+
+
+
+
+            <div class="mb-3">
+
+                  <label class="form-label">Title</label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.name" type="text"
+                        class="form-control">
+                  <p *ngIf="textInputErr" class="error_msg">Your input must have more than two caracters</p>
+
+            </div>
+
+            <div class="mb-3">
+
+                  <label class="form-label">Size</label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.size" type="text"
+                        class="form-control">
+
+
+            </div>
+
+
+            <label class="form-label">Category</label>
+            <select class="form-select" id="category_id" name="category_id" [(ngModel)]="selectedCategoryId">
+                  <option [value]="undefined" [selected]="realestate.category_id===undefined">Choose category</option>
+                  <option *ngFor="let category of categories" [value]="category.id"
+                        [selected]="realestate.category_id === category.id">{{category.name}}</option>
+
+            </select>
+            <div class="mb-3">
+                  <label class="form-label">Location</label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.location" type="text"
+                        class="form-control">
+                  <p *ngIf="textInputErr" class="error_msg">Your input must have more than two caracters</p>
+
+            </div>
+            <div class="mb-3">
+                  <label class="form-label">Floors </label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.floor" type="number"
+                        class="form-control">
+
+
+            </div>
+            <div class="mb-3">
+                  <label class="form-label">Rooms </label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.room" type="number"
+                        class="form-control">
+
+
+            </div>
+            <div class="mb-3">
+                  <label class="form-label">Price</label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.price" type="number"
+                        class="form-control">
+
+            </div>
+            <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <textarea [ngModelOptions]="{standalone: true}" [(ngModel)]="realestate.description"
+                        class="form-control" rows="3"></textarea>
+                  <p *ngIf="textInputErr" class="error_msg">Your input must have more than two caracters</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary me-2">Publish</button>
+
+      </form>
+
+</div>

@@ -1,0 +1,9 @@
+<!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+      <input (keyup.enter)="searchRealestates()" [(ngModel)]="realestateName" [ngModelOptions]="{standalone: true}"
+            type="search" class="form-control form-control-dark" placeholder="Try: Audi A4" aria-label="Search">
+</form> -->
+
+<div class="search-input">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search by name" (keyup.enter)="search()" />
+      <button (click)="search()">Search</button>
+</div>

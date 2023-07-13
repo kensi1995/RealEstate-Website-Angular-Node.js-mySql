@@ -1,0 +1,107 @@
+<!-- <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand" routerLink="">Home<i class="bi bi-house-door-fill"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <fa-icon [icon]="faBars"></fa-icon>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                        <li class="nav-item" *ngIf="displayAdmin">
+                              <a class="nav-link" routerLink="admin">Admin Panel</a>
+                        </li>
+
+                  </ul>
+
+                  <div *ngIf="!isUserLogged()" class="btn-group">
+                        <button routerLink="user/register" class="registerBtn btn btn-primary">Register</button>
+                        <button routerLink="user/login" class="btn btn-primary">Login</button>
+                  </div>
+
+
+                  <div *ngIf="isUserLogged()" class="d-flex profile-info me-5">
+                        <div class="d-flex align-items-center p-2 username"><span>Welcome {{user.firstName}}
+                                    {{user.lastName}}</span>
+                        </div>
+                        <div class="dropdown border-top">
+                              <a href="#"
+                                    class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                                    id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img style="border-radius: 50%;" height="50" [src]="user.image" alt="">
+                              </a>
+                              <ul class="dropdown-menu text-small shadow " aria-labelledby="dropdownUser3">
+                                    <li><a class="dropdown-item" routerLink="user-profile">Profile</a></li>
+                                    <li><a class="dropdown-item" routerLink="/realestate/add">Add new car</a></li>
+                                    <li><a routerLink="message" class="dropdown-item" href="#">Messages</a></li>
+                                    <li>
+                                          <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a (click)="userLogout()" class="dropdown-item" routerLink="">Logout</a></li>
+                              </ul>
+                        </div>
+                  </div>
+
+            </div> 
+
+      </div>
+</nav>  -->
+<nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand" routerLink="">Home<i class="bi bi-house-door-fill"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <fa-icon [icon]="faBars"></fa-icon>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" *ngIf="displayAdmin">
+                              <a class="nav-link" routerLink="admin">Admin Panel</a>
+                        </li>
+                  </ul>
+
+
+                  <div class="searchStyle"> <!-- Updated CSS classes -->
+                        <input type="text" [(ngModel)]="searchQuery" (keyup.enter)="performSearch()"
+                              placeholder="Search realestates...">
+
+                        <button class="btn btn-primary btnSearch" (click)="performSearch()">Search</button>
+                  </div>
+
+                  <div *ngIf="!isUserLogged()" class="btn-group">
+                        <button routerLink="user/register" class="registerBtn btn btn-primary">Register</button>
+                        <button routerLink="user/login" class="btn btn-primary">Login</button>
+                  </div>
+
+                  <div *ngIf="isUserLogged()" class="d-flex profile-info me-5">
+                        <div class="d-flex align-items-center p-2 username"><span>Welcome {{user.firstName}}
+                                    {{user.lastName}}</span>
+                        </div>
+                        <div class="dropdown border-top">
+                              <a href="#"
+                                    class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle"
+                                    id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img style="border-radius: 50%;" height="50" [src]="user.image" alt="">
+                              </a>
+                              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                                    <li><a class="dropdown-item" routerLink="user-profile">Profile</a></li>
+                                    <li><a class="dropdown-item" routerLink="/realestate/add">Add new real estate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" routerLink="message/massage-send">Send message</a>
+                                    </li>
+                                    <li><a class="dropdown-item" routerLink="message/massage-inbox">Inbox</a></li>
+
+                                    <!-- <li><a routerLink="message" class="dropdown-item" href="#">Messages</a></li> -->
+                                    <li>
+                                          <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a (click)="userLogout()" class="dropdown-item" routerLink="">Logout</a></li>
+                              </ul>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</nav>

@@ -1,0 +1,14 @@
+.register-form {
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  font-size: 18px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.error_msg {
+  color: red;
+}

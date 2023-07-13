@@ -1,0 +1,22 @@
+<div class="wrapper" *ngFor="let message of messages">
+      <div class="content">
+            <img class="userImg" [src]="message.image" alt="...">
+            <h3>{{message.username}}</h3>
+            <hr>
+            <div class="message">{{message.message}}</div>
+            <div class="d-flex flex-row align-items-center">
+                  <p class="small text-muted mb-0">{{message.messageTime}}</p>
+
+
+            </div>
+            <button (click)="replyToggleBtn()" class="replyBtn btn btn-primary">Reply</button>
+            <div *ngIf="replyToggle">
+                  <textarea class="reply-msg" [(ngModel)]="replayMessageText" rows="10"></textarea>
+                  <button (click)="replyMessage(message.fromUserId,message.toUserId)"
+                        class="replyBtn btn btn-primary">Send
+                        reply</button>
+            </div>
+
+            <button (click)="deleteYourMessage(message.id)" class="replyBtn btn btn-danger">Delete</button>
+      </div>
+</div>

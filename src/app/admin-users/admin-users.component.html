@@ -1,0 +1,30 @@
+<div class="users_table d-flex ">
+
+      <table class="table">
+            <thead>
+                  <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Ban users</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let user of users" scope="row">
+
+
+                        <td> {{user.id}} </td>
+                        <td>{{user.username}} </td>
+                        <td>{{user.email}} </td>
+                        <td> {{user.role}} </td>
+                        <td> {{user.status}} </td>
+
+                        <td (click)="banUser(user.id)"><button class="btn btn-danger">Ban user</button></td>
+                  </tr>
+
+            </tbody>
+      </table>
+
+</div>

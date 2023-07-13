@@ -1,0 +1,13 @@
+<div class="wrapper">
+      <div class="content">
+            <div class="username">
+                  <label for="">Username</label>
+                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="toUserText" type="text">
+            </div>
+
+            <hr>
+            <textarea class="message" [ngModelOptions]="{standalone: true}" [(ngModel)]="messageText"
+                  placeholder="Type message...." rows="10"></textarea>
+            <button (click)="sendNewMessage()" class="sendBtn btn btn-primary">Send</button>
+      </div>
+</div>

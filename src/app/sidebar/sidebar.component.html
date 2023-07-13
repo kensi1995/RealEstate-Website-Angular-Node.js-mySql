@@ -1,0 +1,20 @@
+<div class="d-flex flex-column flex-shrink-0 bg-light borderColorEdit">
+
+      <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+            <li class="nav-item">
+                  <a *ngIf="displayLoggedContent" class="nav-link active py-3 border-bottom sidebar-item"
+                        routerLink="message" aria-current="page" title="" data-bs-toggle="tooltip"
+                        data-bs-placement="right" data-bs-original-title="Home">
+                        <i class="bi bi-chat-square-dots"></i>
+                  </a>
+            </li>
+            <li *ngFor="let category of categorys">
+                  <a (click)="searchCategory(category.id)" class="nav-link active py-3 border-bottom sidebar-item"
+                        title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        {{category.name}}
+                  </a>
+            </li>
+
+      </ul>
+      <router-outlet></router-outlet>
+</div>

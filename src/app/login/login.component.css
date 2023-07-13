@@ -1,0 +1,22 @@
+.login-form {
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  font-size: 18px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+#login-form input {
+  border: none;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  border-radius: 0px;
+}
+.error_msg {
+  color: red;
+}
+.btn {
+  font-size: 19px;
+}

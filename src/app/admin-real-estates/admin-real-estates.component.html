@@ -1,0 +1,18 @@
+<div class="row mx-0">
+      <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 mb-2" *ngFor="let realestate of realestates">
+            <div class="card">
+                  <div>
+                        <img class="card-image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h1>{{realestate.name}} </h1>
+
+                              <span class="price"> {{realestate.price}} KM</span>
+                        </div>
+                        <button (click)="deleteOneRealestate(realestate.id)"
+                              class="btn btn-danger d-flex align-items-center">Delete
+                              Realestate</button>
+                  </div>
+            </div>
+
+      </div>
+</div>

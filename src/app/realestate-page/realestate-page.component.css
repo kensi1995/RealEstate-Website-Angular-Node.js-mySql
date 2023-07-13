@@ -1,0 +1,48 @@
+.content-conteiner {
+  margin: auto;
+  width: 60%;
+}
+
+.displayImage {
+  object-fit: fill;
+  object-position: center;
+}
+p {
+  padding: 10px;
+  font-size: 20px;
+}
+
+hr {
+  background-color: aquamarine;
+}
+.buybtn {
+  width: 30%;
+  align-self: center;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.comment {
+  margin-top: 7px;
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+  .displayImage {
+    width: 350px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .displayImage {
+    width: 550px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .displayImage {
+    width: 750px;
+    height: 450px;
+  }
+}

@@ -1,0 +1,10 @@
+.sidebar-item:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.sidebar-item {
+  max-width: 10rem;
+}
+.borderColorEdit {
+  border: 1px solid green;
+}

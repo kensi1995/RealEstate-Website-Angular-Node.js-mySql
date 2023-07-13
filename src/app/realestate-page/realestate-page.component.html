@@ -1,0 +1,41 @@
+<div class="content-conteiner d-flex flex-column">
+  <!-- <div class="card-container d-inline-flex"> -->
+  <div class="card">
+    <div>
+
+      <h4> {{realestate.username}} </h4>
+
+
+      <carousel [showIndicators]="true">
+        <slide *ngFor="let slide of realestateImages; let index=index">
+          <img class="displayImage " [src]="slide.image" alt="image slide">
+
+        </slide>
+      </carousel>
+
+
+    </div>
+
+    <div class="card-body">
+      <h1> Title: {{realestate.name}}</h1>
+      <hr>
+      <p> <b>Price:</b> {{realestate.price}} </p>
+      <hr>
+      <p> <b>Location:</b> {{realestate.location}}</p>
+      <hr>
+      <p> <b>Size:</b> {{realestate.size}}</p>
+      <hr>
+      <p> <b>Rooms:</b> {{realestate.room}} </p>
+      <hr>
+      <p> <b>Floors:</b> {{realestate.floor}} </p>
+      <hr>
+      <p> <b> Description:</b> {{realestate.description}} </p>
+      <hr>
+
+
+    </div>
+    <button *ngIf="isUserLogged" (click)="buyRealestate()" class="buybtn btn btn-primary">Buy</button>
+  </div>
+  <!-- </div> -->
+
+</div>

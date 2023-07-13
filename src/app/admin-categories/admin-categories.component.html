@@ -1,0 +1,26 @@
+<div>
+
+      <table class="table">
+            <thead>
+                  <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Category name</th>
+
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor=" let oneCategory of categories">
+                        <th scope="row"> {{oneCategory.id}} </th>
+                        <td> {{oneCategory.name}}</td>
+
+                  </tr>
+                  <button (click)="togleInput()" class="btn btn-primary">Add category</button>
+                  <div *ngIf="togle">
+                        <input [(ngModel)]="newCategory" type="text">
+                        <button (click)="saveCategory()">Save category</button>
+                  </div>
+
+            </tbody>
+      </table>
+
+</div>
